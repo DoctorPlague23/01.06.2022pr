@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея з grid</title>
+    <style>
+        .container {
+            background-color: #DDDDDD;
+			padding: 4px;
+            display: grid;
+            grid-column-gap: 5px;
+            grid-row-gap:5px;
+            grid-template-areas:
+           
+            ' left-menu right-area  header header header  header header header  '
+
+            'left-menu right-area main-area main-area main-area main-area main-area main-area  '
+
+            'left-menu right-area main-area main-area main-area main-area main-area main-area  '
+            'left-menu right-area main-area main-area main-area main-area main-area main-area  '
+            'left-menu right-area main-area main-area main-area main-area main-area main-area  '
+            'left-menu right-area main-area main-area main-area main-area main-area main-area  '
+           
+
+            'left-menu right-area footer footer footer  footer footer footer '
+           ;
+            font-size: 24px;
+            text-align: center;
+        }
+        .sub-left{
+            grid-area:sub-left;
+            background-color:pink;
+          width: 200px;
+    bottom:-210px;
+    right:-100px;
+    position:relative;
+        }
+        .sub-left2{
+            grid-area:sub-left2;
+            background-color:red;
+          width: 200px;
+    bottom:-190px;
+    right:-150px;
+    position:relative;
+        }
+
+        
+        .container div {
+           padding-top:20px;
+           padding-bottom:20px;	
+        }
+    header{
+        grid-area:header;
+        background-color:blue;
+    }
+    nav{
+        grid-area: left-menu;
+        background-color: #dd5555;
+        height:700px;
+
+    }
+    main{
+        grid-area:main-area;
+        background-color: #880088;
+
+    }
+    aside{
+
+        grid-area:right-area;
+        background-color:#44aa33;
+    }
+    footer{
+        grid-area:footer;
+        background-color:#ffaa00; 
+    }
+    .container header,hgroup, nav,main,aside,footer {
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+
+
+ 
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>Заголовк</header>
+        <nav>Додаткове меню</nav>
+        <main >5 
+        <hgroup class="sub-left">за 2 години</hgroup>
+         <hgroup class="sub-left2">за 2:05 години </hgroup>
+        </main>
+        
+
+        <aside>Підзаголовок</aside>
+        <footer>help me!</footer>
+</div>
+</body>
+</html>
